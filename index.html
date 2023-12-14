@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+
+    <title>micascreativecorner</title>
+    <style>
+      body {
+        margin: 0;
+        padding-top: 75px;
+        font-family: "Quicksand", sans-serif;
+        color: white;
+        background: radial-gradient(circle, coral, midnightblue, black);
+        background-size: 400% 400%;
+        animation: gradientAnimation 20s ease infinite;
+      }
+
+      /* Animation for the background gradient */
+
+      @keyframes gradientAnimation {
+
+        0%,
+        100% {
+          background-position: 200% 200%;
+        }
+
+        50% {
+          background-position: 150% 150%;
+        }
+      }
+
+      /* Copied code ends */
+
+      /* Styling for anchor links */
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* Styles for navigation */
+
+      nav ul,
+      nav li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+
+      nav {
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .website-title,
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 16px;
+        display: inline-block;
+      }
+
+      .website-title {
+        text-decoration: none;
+        pointer-events: none;
+        float: left;
+      }
+
+
+      nav a {
+        float: right;
+        margin-top: 15px;
+      }
+
+      a:hover {
+        color: gold
+      }
+
+      nav a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .content-block {
+        width: 95%;
+        margin: 50px auto;
+        border-top: 1px solid;
+        overflow: hidden;
+      }
+
+      .heading-block {
+        float: left;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .text-block-center {
+        float: left;
+        width: 20%;
+        margin: 10px 70px;
+      }
+
+      .text-block-right {
+        float: right;
+        font-size: 1.5em;
+        width: 40%;
+        margin: 10px;
+      }
+
+      .image-block {
+        float: right;
+        width: 40%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0px;
+      }
+
+      /* Styles for newsletter form */
+
+      .newsletter {
+        max-width: 600px;
+        margin: 0 auto
+      }
+
+      footer {
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      input {
+        padding: 10px;
+        margin: 5px;
+        width: 200px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      video {
+        width: 100%;
+        opacity: 0.3;
+      }
+
+      /* Styles for h1 */
+
+      h1 {
+        width: 60%;
+        margin: 100px 20px;
+        padding: 10px;
+        font-size: 4em;
+        font-family: "Playfair", serif;
+      }
+
+      h1:hover {
+        font-weight: bold;
+        color: #fff68f;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" class="website-title">Mica Andrea Morante</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="poems.html">Poems</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <h1>Poems</h1>
+    <div class="content-block">
+      <div class="heading-block">Contact</div>
+      <div class="text-block-center">
+        <p><a href="mailto:info@example.com?subject=Inquiry&body=Hello%20there,">maomoran@uwaterloo.ca</a></p>
+        <p><a href="tel:+1234567890">(555) 555-5555</a></p>
+        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">instagram</a></p>
+      </div>
+      <div class="image-block">
+        <img src="IMG_3464.JPG" alt="me holding a camera">
+      </div>
+    </div>
+    <footer>
+      <div class="newsletter">
+        <h4>Sign up for free updates</h4>
+        <form action="" method="post">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
