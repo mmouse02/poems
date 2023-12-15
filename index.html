@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;">
 
     <title>micascreativecorner</title>
     <style>
+      <style>
+
+      /* Common styles for all sheets */
       body {
         margin: 0;
         padding-top: 75px;
@@ -19,6 +22,15 @@
 
       /* Animation for the background gradient */
 
+      /*
+      Code adapted from https://www.w3schools.com/cssref/tryit.php?filename=trycss3_keyframes4
+      Author: www.w3schools.com
+      Original Name: The @keyframes Rule
+      Original Description: Displays a moving square with changing colours
+      Original Date retrieved: Dec. 2, 2023
+      */
+
+      /* Copied code starts */
       @keyframes gradientAnimation {
 
         0%,
@@ -33,7 +45,7 @@
 
       /* Copied code ends */
 
-      /* Styling for anchor links */
+      /* Styles for anchor links */
 
       a {
         color: white;
@@ -48,7 +60,6 @@
         padding: 0;
         list-style: none;
       }
-
 
       nav {
         background-color: rgba(0, 0, 0, 0.5);
@@ -73,14 +84,13 @@
         float: left;
       }
 
-
       nav a {
         float: right;
         margin-top: 15px;
       }
 
       a:hover {
-        color: gold
+        color: gold;
       }
 
       nav a:hover {
@@ -116,12 +126,6 @@
         margin: 10px;
       }
 
-      .poem-block {
-        text-align: center;
-        margin: 10px;
-        line-height: 2;
-      }
-
       .image-block {
         float: right;
         width: 40%;
@@ -134,11 +138,40 @@
         margin: 10px 0px;
       }
 
-      /* Styles for newsletter form */
+      /* Styles for gallery */
 
+      /*
+      Code adapted from https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-template
+      Author: www.w3schools.com
+      Original Name: CSS Grid Template
+      Original Description: Demonstrates the use of the grid-template property
+      Original Date retrieved: Dec. 2, 2023
+      */
+
+      /* Copied code starts */
+
+      .gallery {
+        /* Display grid with two columns */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        /* Set gap between grid items */
+        padding: 0px 30px 40px;
+        /* Add padding around the grid */
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        /* Maintain image aspect ratio */
+      }
+
+      /* Copied code ends */
+
+      /* Styles for newsletter form */
       .newsletter {
         max-width: 600px;
-        margin: 0 auto
+        margin: 0 auto;
       }
 
       footer {
@@ -171,16 +204,17 @@
 
       /* Styles for headings */
 
-      h1,
-      h2 {
-        font-family: "Playfair", serif;
-      }
-
       h1 {
         width: 60%;
         margin: 100px 20px;
         padding: 10px;
         font-size: 4em;
+        font-family: "Playfair", serif;
+      }
+
+      h1:hover {
+        font-weight: bold;
+        color: #fff68f;
       }
 
       h2 {
@@ -195,7 +229,264 @@
         color: #fff68f;
       }
 
-      /* Styles for shortcut to table of contents */
+      /* Styles for poem */
+      .poem-block {
+        text-align: center;
+        margin: 10px;
+        line-height: 2;
+      }
+
+      /* Styles for table of contents shortcut*/
+
+      .shortcut {
+        text-align: center;
+        font-style: italic;
+        margin: 50px 20px auto;
+        font-size: .75em;
+      }
+
+      /* Styles for table */
+
+      table {
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+      }
+    </style>
+    <style>
+      /* Common styles for all sheets */
+      body {
+        margin: 0;
+        padding-top: 75px;
+        font-family: "Quicksand", sans-serif;
+        color: white;
+        background: radial-gradient(circle, coral, midnightblue, black);
+        background-size: 400% 400%;
+        animation: gradientAnimation 20s ease infinite;
+      }
+
+      /* Animation for the background gradient */
+
+      /*
+      Code adapted from https://www.w3schools.com/cssref/tryit.php?filename=trycss3_keyframes4
+      Author: www.w3schools.com
+      Original Name: The @keyframes Rule
+      Original Description: Displays a moving square with changing colours
+      Original Date retrieved: Dec. 2, 2023
+      */
+
+      /* Copied code starts */
+      @keyframes gradientAnimation {
+
+        0%,
+        100% {
+          background-position: 200% 200%;
+        }
+
+        50% {
+          background-position: 150% 150%;
+        }
+      }
+
+      /* Copied code ends */
+
+      /* Styles for anchor links */
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* Styles for navigation */
+
+      nav ul,
+      nav li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav {
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .website-title,
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 16px;
+        display: inline-block;
+      }
+
+      .website-title {
+        text-decoration: none;
+        pointer-events: none;
+        float: left;
+      }
+
+      nav a {
+        float: right;
+        margin-top: 15px;
+      }
+
+      a:hover {
+        color: gold;
+      }
+
+      nav a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .content-block {
+        width: 95%;
+        margin: 50px auto;
+        border-top: 1px solid;
+        overflow: hidden;
+      }
+
+      .heading-block {
+        float: left;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .text-block-center {
+        float: left;
+        width: 20%;
+        margin: 10px 70px;
+      }
+
+      .text-block-right {
+        float: right;
+        font-size: 1.5em;
+        width: 40%;
+        margin: 10px;
+      }
+
+      .image-block {
+        float: right;
+        width: 40%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0px;
+      }
+
+      /* Styles for gallery */
+
+      /*
+      Code adapted from https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-template
+      Author: www.w3schools.com
+      Original Name: CSS Grid Template
+      Original Description: Demonstrates the use of the grid-template property
+      Original Date retrieved: Dec. 2, 2023
+      */
+
+      /* Copied code starts */
+
+      .gallery {
+        /* Display grid with two columns */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        /* Set gap between grid items */
+        padding: 0px 30px 40px;
+        /* Add padding around the grid */
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        /* Maintain image aspect ratio */
+      }
+
+      /* Copied code ends */
+
+      /* Styles for newsletter form */
+      .newsletter {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      footer {
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      input {
+        padding: 10px;
+        margin: 5px;
+        width: 200px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      video {
+        width: 100%;
+        opacity: 0.3;
+      }
+
+      /* Styles for headings */
+
+      h1 {
+        width: 60%;
+        margin: 100px 20px;
+        padding: 10px;
+        font-size: 4em;
+        font-family: "Playfair", serif;
+      }
+
+      h1:hover {
+        font-weight: bold;
+        color: #fff68f;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin: 50px 10px;
+        text-align: center;
+      }
+
+      h1:hover,
+      h2:hover {
+        font-weight: bold;
+        color: #fff68f;
+      }
+
+      /* Styles for poem */
+      .poem-block {
+        text-align: center;
+        margin: 10px;
+        line-height: 2;
+      }
+
+      /* Styles for table of contents shortcut*/
+
       .shortcut {
         text-align: center;
         font-style: italic;
